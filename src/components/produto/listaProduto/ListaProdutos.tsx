@@ -4,8 +4,8 @@ import { AuthContext } from '../../../context/AuthContext';
 import Produto from '../../../model/Produto';
 import { buscar } from '../../../service/Service';
 import CardProduto from '../cardProduto/CardProduto';
-import { Dna } from '@phosphor-icons/react';
-
+import  { DNA }  from 'react-loader-spinner';
+import {toastAlerta} from '../../../util/toastAlerta'
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [produtosFiltrados, setProdutosFiltrados] = useState<Produto[]>([]);
@@ -21,7 +21,7 @@ function ListaProdutos() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado');
+      toastAlerta('Você precisa estar logado','erro');
       navigate('/');
     } else {
       buscarProdutos();
@@ -37,7 +37,7 @@ function ListaProdutos() {
       });
     } catch (error: any) {
       if (error.toString().includes('403')) {
-        alert('O token expirou, favor logar novamente');
+        toastAlerta('O token expirou, favor logar novamente','info');
         handleLogout();
       }
     }
@@ -112,15 +112,15 @@ function ListaProdutos() {
         </div>
 
         {produtos.length === 0 && (
-          <Dna
+            <DNA
             visible={true}
-            height='200'
-            width='200'
-            ariaLabel='dna-loading'
+            height="200"
+            width="200"
+            ariaLabel="dna-loading"
             wrapperStyle={{}}
-            wrapperClass='dna-wrapper mx-auto'
-          />
-        )}
+            wrapperClass="dna-wrapper mx-auto"
+            />
+            )}
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
           {produtosFiltrados.map((produto) => (

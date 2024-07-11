@@ -5,6 +5,7 @@ import { BsPencilSquare } from 'react-icons/bs';
 import { IoInformationCircleOutline } from 'react-icons/io5';
 import { MdExitToApp } from 'react-icons/md';
 import { HouseLine, UserCirclePlus, CaretDown,} from '@phosphor-icons/react'; 
+import  {toastAlerta}  from '../../util/toastAlerta';
 import './Navbar.css';
 
 function Navbar() {
@@ -14,7 +15,7 @@ function Navbar() {
   
   function logout() {
     handleLogout();
-    alert('Usuário deslogado com sucesso');
+    toastAlerta('Usuário deslogado com sucesso','sucesso');
     navigate('/login');
   }
 

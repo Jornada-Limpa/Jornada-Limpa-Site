@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Sobre.css";
-
+import urso from '../../assets/Sage_green_bear_desktop_wallpaper_3_-removebg-preview.png'
 
 interface TeamMember {
   name: string;
@@ -52,11 +52,11 @@ function Sobre() {
   return (
     <>
       <div className="justificando">
-        <div className="h-screen ">
+    
           <div className="pl-14 text-4xl mb-4">
             <h2>Sobre nós</h2>
           </div>
-          <div className="flex pl-14 pr-14">
+          <div className=" pl-14 pr-14 flex ">
             <div className="w-1/2 text-justify">
               <p>
                 O projeto "Jornada Limpa" é uma iniciativa voltada para os Objetivos de Desenvolvimento Sustentável (ODS) da ONU, com o objetivo de conscientizar as pessoas sobre a importância de reduzir a dependência de substâncias nocivas. Nosso foco é estabelecer uma conexão mais significativa entre usuários e provedores de serviços de e-commerce, promovendo um ambiente online seguro e educacional.
@@ -67,11 +67,11 @@ function Sobre() {
               </p>
             </div>
             <div className="imagem">
-             
+             <img src={urso} alt="" />
             </div>
           </div>
         </div>
-      </div>
+      
 
       <section className="segunda">
         <div className="w-1/2 mb-4">

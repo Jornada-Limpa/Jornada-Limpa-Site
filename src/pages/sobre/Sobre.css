@@ -1,12 +1,18 @@
+:root {
+    --color-background: #faf2dc ;
+    --color-primary: #3E94AB;
+    --color-secundary: #5C4129;
+    --color-footer: #000000;
+  }
+
+
+
+
 .imagem {
-    width: 30rem;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+   height: 100%;
+   
+    
+}   
 
 .imagem div {
     border-radius: 100%;
@@ -15,21 +21,27 @@
 }
 
 .justificando {
-    height: 100vh;
+    height: 120%;
+    
     padding-top: 20vh;
+    background: var(--color-primary);
     padding-left: 15vh;
+    color: white;
 }
 
 .segunda {
     position: relative;
     height: 100vh;
-    background: #4C9F38;
+    background: var(--color-background);
     padding: 3.5rem;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.segunda h2{
+    color: black;
+}
 .avatar {
     display: flex;
     justify-content: space-between;
@@ -55,7 +67,7 @@
 .member-info {
     margin-top: 2rem;
     height: 10rem;
-    background-color: rgb(172, 197, 171);
+    background-color: rgb(31, 184, 204);
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -81,5 +93,5 @@
 
 .description {
     font-size: 1rem;
-    color: #555;
+    color: black;
 }

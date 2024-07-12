@@ -3,6 +3,7 @@ import { Lightning, Users, Leaf } from "phosphor-react";
 import "./Sobre.css";
 import urso from '../../assets/Sage_green_bear_desktop_wallpaper_3_-removebg-preview.png';
 
+
 interface TeamMember {
   name: string;
   imgSrc: string;
@@ -79,8 +80,8 @@ function Sobre() {
       </div>
 
       <section className="segunda">
-        <div className="w-1/2 mb-4">
-          <h2 className="text-white text-4xl">Quem somos?</h2>
+        <div className="w-1/2 mb-4 text-center">
+          <h2 className="text-white text-4xl ">Quem somos?</h2>
         </div>
 
         <div className="avatar">
@@ -119,6 +120,24 @@ function Sobre() {
           </div>
         </div>
       </section>
+
+      <section className="quarta">
+          <div className="centralizacao">
+           <h3>
+            A Generation
+           </h3> 
+          
+           <p>A "Generation" é um programa de formação e capacitação focado em preparar jovens para o mercado de trabalho na área de tecnologia, promovendo cursos de programação e habilidades digitais. A turma JAVA74 se destaca por ser um grupo específico dentro dessa iniciativa, voltado para o aprendizado da linguagem Java.</p>
+       
+           <p>Na turma JAVA74, os participantes aprendem conceitos fundamentais de programação, como estrutura de dados, algoritmos, e desenvolvimento de aplicações, além de práticas de trabalho em equipe e metodologias ágeis. O ambiente colaborativo e a troca de experiências entre os alunos são aspectos importantes que enriquecem o aprendizado</p>
+        
+            
+          </div>
+
+      </section>
+
+
+    
     </>
   );
 }

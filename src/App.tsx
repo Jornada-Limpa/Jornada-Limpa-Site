@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './index.css';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Contato from './pages/contato/Contato';
@@ -31,7 +32,7 @@ function App() {
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/contato" element={<Contato />} />
-              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />

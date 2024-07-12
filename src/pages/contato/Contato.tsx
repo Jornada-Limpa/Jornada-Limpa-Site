@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
     <>
     <div className='flex items-center justify-start p-80 h-screen'>
         <div className='card p-5 rounded-lg shadow-2xl shadow-amber-200 w-full max-w-md'>
-            <h1 className='text-4xl font-bold font-mono mb-4 text-amber-400'>Contato</h1>
+            <h1 className='text-4xl font-title font-bold mb-4 text-amber-400'>Contato</h1>
             <p className='text-sm font-sans'>Para entrar em contato conosco, por favor utilize o formulário abaixo. Responderemos em até dois dias úteis.</p>
                 <div className="contact-form-container">
                 <form className="contact-form" onSubmit={handleSubmit}>

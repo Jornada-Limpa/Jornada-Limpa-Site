@@ -7,8 +7,8 @@ function Entrega() {
     <>
       <div className="justificando">
         <div className="h-screen ">
-          <div className="pl-1 text-4xl mb-4">
-            <h2>Política de Entrega:</h2>
+          <div className="pl-1 text-2xl mb-4 font-title">
+            <h2>POLITÍCA DE ENTREGA:</h2>
           </div>
           <div className="flex pl-1 pr-40">
             <div className="text-justify">

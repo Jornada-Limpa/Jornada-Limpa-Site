@@ -75,7 +75,7 @@ function ListaProdutos() {
     <>
       <div className='container mx-auto my-4'>
         <div className='flex items-center justify-between mb-4'>
-          <h2 className='text-2xl font-bold'>Lista de Produtos</h2>
+          <h2 className='text-xl font-title text-white font-bold'>LISTA DE PRODUTOS</h2>
           <div className='flex gap-4'>
             <input
               type='text'

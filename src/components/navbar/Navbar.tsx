@@ -31,7 +31,7 @@ function Navbar() {
          
           
 
-          <div className='relative flex gap-5'>
+          <div className='relative font-title flex gap-5'>
             <Link to='/categorias' className="flex items-center">
               Categoria
             </Link>

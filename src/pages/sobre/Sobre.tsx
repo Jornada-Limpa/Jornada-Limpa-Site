@@ -53,11 +53,11 @@ function Sobre() {
     <>
       <div className="justificando">
         <div className="h-screen ">
-          <div className="pl-14 text-4xl mb-4">
+          <div className="pl-14 text-2xl mb-4">
             <h2>Sobre nós</h2>
           </div>
           <div className="flex pl-14 pr-14">
-            <div className="w-1/2 text-justify">
+            <div className="w-4/5 text-justify">
               <p>
                 O projeto "Jornada Limpa" é uma iniciativa voltada para os Objetivos de Desenvolvimento Sustentável (ODS) da ONU, com o objetivo de conscientizar as pessoas sobre a importância de reduzir a dependência de substâncias nocivas. Nosso foco é estabelecer uma conexão mais significativa entre usuários e provedores de serviços de e-commerce, promovendo um ambiente online seguro e educacional.
               </p>

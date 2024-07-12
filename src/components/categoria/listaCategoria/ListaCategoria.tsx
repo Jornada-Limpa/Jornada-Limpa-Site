@@ -45,8 +45,8 @@ function ListaCategorias() {
       
       <div className='min-h-32 flex items-center justify-center'>
 
-        <Link to={`/cadastroCategoria`} className='bg-indigo-900 py-3 px-3 rounded-xl text-white'>
-          <button>Cadastrar Categoria</button>
+        <Link to={`/cadastroCategoria`} className='bg-indigo-900 py-3 px-3 rounded-xl text-white font-title text-sm'>
+          <button>CADASTRAR CATEGORIA</button>
         </Link>
 
       </div>

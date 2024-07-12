@@ -52,7 +52,7 @@
   }
   
   .avatar img {
-    width: 10rem;
+    width: 15rem;
     border-radius: 50%;
     transition: transform 0.3s, box-shadow 0.3s;
   }
@@ -116,7 +116,7 @@
   
   .valor-item {
     text-align: center;
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -132,4 +132,25 @@
     color: #3E94AB;
     margin: 0.5rem 0;
   }
-  
+  .quarta{
+    background: var(--color-background);
+    padding: 5rem;
+    height: 100vh;
+    display: flex;
+    
+  }
+  .quarta h3{
+    font-size: 3rem;
+  }
+  .quarta p{
+    page-break-after:always;
+  }.centralizacao{
+    margin-top: auto;
+    margin-bottom: auto;
+  }.titulo{
+    display: flex;
+    margin-bottom: 3rem;
+  }.titulo img{
+    width: 20rem;
+
+  }

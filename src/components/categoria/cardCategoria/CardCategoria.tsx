@@ -18,7 +18,7 @@ function CardCategorias({ categoria }: CardCategoriaProps) {
   return (
     <div className='border flex flex-col rounded-2xl overflow-hidden justify-between relative'>
       <div className='container columns-2 bg-indigo-800'>
-        <header className='py-2 px-6 text-white font-bold text-2xl'>Categoria {categoria.id}</header>
+        <header className='py-2 px-6 text-white font-title text-2xl'>Categoria {categoria.id}</header>
         <button
           className='absolute top-2 right-2 text-white cursor-pointer focus:outline-none z-10'
           onClick={toggleOpcoes}

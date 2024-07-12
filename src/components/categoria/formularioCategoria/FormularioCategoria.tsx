@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { atualizar, buscar, cadastrar } from "../../../service/Service";
 import { AuthContext } from "../../../context/AuthContext";
 import Categoria from "../../../model/Categoria";
-
+import {toastAlerta} from '../../../util/toastAlerta'
 function FormularioCategoria() {
     const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
   
@@ -48,15 +48,15 @@ function FormularioCategoria() {
             }
           })
   
-          alert('Tema atualizado com sucesso')
+          toastAlerta('Categoria atualizado com sucesso','sucesso')
           retornar()
   
         } catch (error: any) {
           if (error.toString().includes('403')) {
-            alert('O token expirou, favor logar novamente')
+            toastAlerta('O token expirou, favor logar novamente', 'info')
             handleLogout()
           } else {
-            alert('Erro ao atualizar o Tema')
+            toastAlerta('Erro ao atualizar a Categoria', 'erro')
           }
   
         }
@@ -69,14 +69,14 @@ function FormularioCategoria() {
             }
           })
   
-          alert('Tema cadastrado com sucesso')
+          toastAlerta('Categoria cadastrado com sucesso','sucesso')
   
         } catch (error: any) {
           if (error.toString().includes('403')) {
-            alert('O token expirou, favor logar novamente')
+            toastAlerta('O token expirou, favor logar novamente', 'info')
             handleLogout()
           } else {
-            alert('Erro ao cadastrado o Tema')
+             toastAlerta('Erro ao cadastrar a categoria','erro')
           }
         }
       }
@@ -90,7 +90,7 @@ function FormularioCategoria() {
   
     useEffect(() => {
       if (token === '') {
-        alert('Você precisa estar logado');
+        toastAlerta('Você precisa estar logado','sucesso');
         navigate('/login');
       }
     }, [token]);
@@ -114,7 +114,7 @@ function FormularioCategoria() {
             />
           </div>
           <button
-            className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block"
+            className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block font-title"
             type="submit"
           >
             {id === undefined ? 'Cadastrar' : 'Editar'}

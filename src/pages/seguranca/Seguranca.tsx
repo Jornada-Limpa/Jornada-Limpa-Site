@@ -7,8 +7,8 @@ function Seguranca() {
     <>
       <div className="justificando">
         <div className="h-screen ">
-          <div className="pl-1 text-4xl mb-4">
-            <h2>Segurança:</h2>
+          <div className="font-title pl-1 text-2xl mb-4">
+            <h2>SEGURANÇA:</h2>
           </div>
           <div className="flex pl-1 pr-40">
             <div className="text-justify">

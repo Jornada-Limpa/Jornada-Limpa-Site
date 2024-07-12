@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { Lightning, Users, Leaf } from "phosphor-react";
 import "./Sobre.css";
 import urso from '../../assets/Sage_green_bear_desktop_wallpaper_3_-removebg-preview.png';
 
@@ -84,10 +85,7 @@ function Sobre() {
 
         <div className="avatar">
           {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="avatar-item"
-            >
+            <div key={index} className="avatar-item">
               <img src={member.imgSrc} alt={member.name} />
               <div className="member-info">
                 <h3 className="name">{member.name}</h3>
@@ -96,6 +94,29 @@ function Sobre() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="terceira">
+        <div className="container text-center">
+          <h2 className="text-4xl mb-8">Nossos Valores</h2>
+          <div className="valores">
+            <div className="valor-item">
+              <Lightning size={48} color="#3E94AB" />
+              <h3>Inovação</h3>
+              <p>Estamos sempre buscando novas soluções e abordagens criativas para os desafios que enfrentamos.</p>
+            </div>
+            <div className="valor-item">
+              <Users size={48} color="#3E94AB" />
+              <h3>Comunidade</h3>
+              <p>Trabalhamos em colaboração com a comunidade para construir um futuro melhor para todos.</p>
+            </div>
+            <div className="valor-item">
+              <Leaf size={48} color="#3E94AB" />
+              <h3>Sustentabilidade</h3>
+              <p>Nosso compromisso é com práticas que respeitem e preservem o meio ambiente.</p>
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -5,6 +5,7 @@ import { BsPencilSquare } from 'react-icons/bs';
 import { IoInformationCircleOutline } from 'react-icons/io5';
 import { MdExitToApp } from 'react-icons/md';
 import { HouseLine, UserCirclePlus, CaretDown,} from '@phosphor-icons/react'; 
+import  {toastAlerta}  from '../../util/toastAlerta';
 import './Navbar.css';
 
 function Navbar() {
@@ -14,7 +15,7 @@ function Navbar() {
   
   function logout() {
     handleLogout();
-    alert('Usuário deslogado com sucesso');
+    toastAlerta('Usuário deslogado com sucesso','sucesso');
     navigate('/login');
   }
 
@@ -30,7 +31,7 @@ function Navbar() {
          
           
 
-          <div className='relative flex gap-5'>
+          <div className='relative font-title flex gap-5'>
             <Link to='/categorias' className="flex items-center">
               Categoria
             </Link>

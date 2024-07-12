@@ -5,7 +5,9 @@ import { AuthContext } from '../../../context/AuthContext';
 import { buscar } from '../../../service/Service';
 import Categorias from '../../../model/Categoria';
 import CardCategorias from '../cardCategoria/CardCategoria';
-import { Dna } from '@phosphor-icons/react';
+import  { DNA }  from 'react-loader-spinner';
+import {toastAlerta} from '../../../util/toastAlerta'
+
 
 function ListaCategorias() {
   const [categorias, setCategorias] = useState<Categorias[]>([]);
@@ -22,7 +24,7 @@ function ListaCategorias() {
       });
     } catch (error: any) {
       if (error.toString().includes('403')) {
-        alert('O token expirou, favor logar novamente')
+        toastAlerta('O token expirou, favor logar novamente','info')
         handleLogout()
       }
     }
@@ -30,7 +32,7 @@ function ListaCategorias() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado');
+      toastAlerta('Você precisa estar logado','erro');
       navigate('/login');
     }
   }, [token]);
@@ -43,8 +45,8 @@ function ListaCategorias() {
       
       <div className='min-h-32 flex items-center justify-center'>
 
-        <Link to={`/cadastroCategoria`} className='bg-indigo-900 py-3 px-3 rounded-xl text-white'>
-          <button>Cadastrar Categoria</button>
+        <Link to={`/cadastroCategoria`} className='bg-indigo-900 py-3 px-3 rounded-xl text-white font-title text-sm'>
+          <button>CADASTRAR CATEGORIA</button>
         </Link>
 
       </div>
@@ -52,7 +54,7 @@ function ListaCategorias() {
         <div className='flex justify-center'>
 
             {categorias.length === 0 && (
-            <Dna
+            <DNA
             visible={true}
             height="200"
             width="200"

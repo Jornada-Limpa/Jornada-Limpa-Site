@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Usuario from '../../model/Usuario'
 import { cadastrarUsuario } from '../../service/Service'
 import './Cadastro.css'
+import {toastAlerta} from '../../util/toastAlerta'
 
 function Cadastro() {
 
@@ -54,14 +55,14 @@ function Cadastro() {
 
       try {
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuarioResposta)
-        alert('Usuário cadastrado com sucesso')
+        toastAlerta('Usuário cadastrado com sucesso','sucesso')
 
       } catch (error) {
-        alert('Erro ao cadastrar o Usuário')
+        toastAlerta('Erro ao cadastrar o Usuário','erro')
       }
 
     } else {
-      alert('Dados inconsistentes. Verifique as informações de cadastro.')
+      toastAlerta('Dados inconsistentes. Verifique as informações de cadastro.','info')
       setUsuario({ ...usuario, senha: "" }) // Reinicia o campo de Senha
       setConfirmaSenha("")                  // Reinicia o campo de Confirmar Senha
     }
@@ -69,10 +70,10 @@ function Cadastro() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center">
         <div className="fundoCadastro hidden lg:block"></div>
         <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
-          <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
+          <h2 className='font-title text-slate-900 text-5xl font-bold'>CADASTRAR</h2>
           <div className="flex flex-col w-full">
             <label htmlFor="nome">Nome</label>
             <input
@@ -92,7 +93,7 @@ function Cadastro() {
               id="usuario"
               name="email"
               placeholder="Usuario"
-              className="border-2 border-slates-700 rounded p-2"
+              className="border-2 border-slate-700 rounded p-2"
               value={usuario.email} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -133,12 +134,12 @@ function Cadastro() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
             />
           </div>
-          <div className="flex justify-around w-full gap-8">
+          <div className="font-title text-xs flex justify-around w-full gap-8">
             <button className='rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2' onClick={back}>
-              Cancelar
+              CANCELAR
             </button>
             <button className='rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2' type='submit'>
-              Cadastrar
+              CADASTRAR
             </button>
           </div>
         </form>

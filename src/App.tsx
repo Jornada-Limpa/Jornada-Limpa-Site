@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './index.css';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Contato from './pages/contato/Contato';
@@ -18,18 +19,20 @@ import EditarCategoria from './components/categoria/formularioCategoria/Formular
 import ListaProdutos from './components/produto/listaProduto/ListaProdutos';
 import FormularioProduto from './components/produto/formularioProduto/FormularioProduto'
 import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
       <AuthProvider>
+      <ToastContainer />
         <BrowserRouter>
           <Navbar />
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/contato" element={<Contato />} />
-              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />

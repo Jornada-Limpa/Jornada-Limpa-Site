@@ -1,97 +1,91 @@
 :root {
-    --color-background: #faf2dc ;
+    --color-background: #faf2dc;
     --color-primary: #3E94AB;
     --color-secundary: #5C4129;
     --color-footer: #000000;
   }
-
-
-
-
-.imagem {
-   height: 100%;
-   
-    
-}   
-
-.imagem div {
-    border-radius: 100%;
-    transition: ease 0.5s;
-    width: 100vh;
-}
-
-.justificando {
-    height: 120%;
-    
+  
+  .imagem {
+    height: 100%;
+  }
+  
+  .imagem img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .justificando {
+    height: 100%;
     padding-top: 20vh;
     background: var(--color-primary);
     padding-left: 15vh;
     color: white;
-}
-
-.segunda {
+  }
+  
+  .segunda {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--color-background);
     padding: 3.5rem;
-   
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.segunda h2{
+  }
+  
+  .segunda h2 {
     color: black;
-}
-.avatar {
+  }
+  
+  
+  .avatar {
     display: flex;
-    justify-content: space-between;
-    padding-top: 2vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; /* Adjust the gap between items */
     width: 100%;
-}
-
-.avatar-item {
-    position: relative;
-}
-
-.avatar img {
+  }
+  
+  .avatar-item {
+    text-align: center;
+    width: 08rem;
+    margin-bottom: 2rem; /* Ensure a consistent bottom margin */
+  }
+  
+  .avatar img {
     width: 10rem;
-    border-radius: 100%;
+    border-radius: 50%;
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.avatar img:hover {
+  }
+  
+  .avatar img:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.member-info {
-    margin-top: 2rem;
-    height: 10rem;
-    background-color: rgb(31, 184, 204);
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    text-align: center;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    opacity: 0;
-    transform: translateY(10px);
-    visibility: hidden;
-}
-
-.member-info.visible {
+  }
+  
+  .member-info {
+    margin-top: 1rem;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
-}
-
-.name {
-    font-size: 1.5rem;
+  }
+  
+  .name {
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-}
-
-.description {
+  }
+  
+  .role {
     font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
     color: black;
-}
+  }
+  

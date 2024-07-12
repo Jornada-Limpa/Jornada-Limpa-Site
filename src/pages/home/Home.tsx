@@ -4,7 +4,7 @@ import './Home.css';
 import { ShoppingCart,ArrowFatLeft,ArrowFatRight,CreditCard,Lock,Package, CigaretteSlash} from '@phosphor-icons/react'
 import Img1 from "../../assets/camisa1.png"
 import Img2 from "../../assets/rename2.png"
-import ImgMain from "../../assets/imagemmain.jpg"
+import ImgMain from "../../assets/final3203902938290289.png"
 import Img3 from "../../assets/xicara1.png"
 import Img4 from "../../assets/xicara2.png"
 import { motion } from 'framer-motion';
@@ -42,38 +42,31 @@ function Home() {
     
     return (
         <>
-        <div className="bg-indigo-900 ">
-            <div className='principal grid grid-cols-2 text-white bg-blue-900 h-96 '>
-
-                <div className="flex flex-col gap-4 items-center justify-center py-4 bg-indigo-950 w-full">
-                    <h2 className='text-5xl font-title font-bold flex'>HOME<CigaretteSlash size={32} /></h2>
+        <div className="body">
+            <div className='principal h-96 relative'>
+                <div className="banner detalhes absolute inset-0 z-0">
+                <img src={ImgMain} alt="" className="w-full h-full object-cover"/>
+                </div>
+                <div className="detalhes home flex flex-col gap-4 py-8 text-white">
+                    <h2 className='text-5xl font-bold flex'>Home<CigaretteSlash size={32} /></h2>
                     <p className='text-xl indent-0.5'>4 por 99R$</p>
-                    <div className="flex justify-around gap-4">
-                
-                        <button className='shop rounded bg-white text-indigo-800 py-2 px-4 flex gap-2 justify-center'>
-                        <ShoppingCart size={32} />
-                        <h1 className='text-xl '>Shopping</h1>
-                        </button>
-
-                    </div>
+                        <div className="gap-4">
+                            <button className='shop rounded bg-white py-2 px-4 flex gap-2'>
+                            <ShoppingCart size={32} />
+                            <h1 className='text-xl'>Shopping</h1>
+                            </button>
+                        </div>
                     <div className='mt-3'>
                         <ModalProduto />
                     </div>
                 </div>
-    
-                <div className="bg-indigo-950 overflow-hidden object-right">
-                    <img src={ImgMain} alt="" className='img' />
-                </div>
-
             </div>
+            
 
+            <div className='qualidades flex gap-6 justify-center'>
 
-
-
-            <div className=' flex gap-6 justify-center'>
-
-                <div className=' gap-1 inline-flex text-white m-5'>
-                    <div className='p-1 border-2 border-white border-dashed rounded-full'>
+                <div className='texto gap-1 inline-flex m-5'>
+                    <div className='p-1 border-2 border-amber-950 border-dashed rounded-full'>
                         <CreditCard size={32} />
                     </div>
                     <div>
@@ -82,8 +75,8 @@ function Home() {
                     </div>
                 </div>
 
-                <div className=' gap-1 inline-flex text-white m-5'>
-                    <div className='p-1 border-2 border-white border-dashed rounded-full '>
+                <div className='texto gap-1 inline-flex m-5'>
+                    <div className='p-1 border-2 border-amber-950 border-dashed rounded-full '>
                         <Lock size={32} />
                     </div>
                     <div>
@@ -92,8 +85,8 @@ function Home() {
                     </div>
                 </div>
 
-                <div className=' gap-1 inline-flex text-white m-5'>
-                    <div className='p-1 border-2 border-white border-dashed rounded-full'>
+                <div className='texto gap-1 inline-flex m-5'>
+                    <div className='p-1 border-2 border-amber-950 border-dashed rounded-full'>
                         <Package size={32} />
                     </div>
                     <div>
@@ -108,11 +101,10 @@ function Home() {
 
             
 
-            <div className="">
+            <div className="titulo">
                 <div className='categoria w-full items-center flex flex-col '>
-
-                    <div className='border-b-2 border-indigo-300'>
-                        <h2 className='text-4xl font-bold font-title text-white mt-11 mb-2'>CATEGORIAS</h2>
+                    <div className='border-b-2 border-yellow-950'>
+                        <h2 className='text-4xl font-bold mt-11 mb-2'>Categorias</h2>
                     </div>
     
                     <div className='carrossel'>
@@ -145,7 +137,6 @@ function Home() {
                 
                 <div className=''>
                     <ListaProdutos />
-
                 </div>
             </div>
 

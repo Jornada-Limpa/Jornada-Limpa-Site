@@ -1,3 +1,14 @@
+:root {
+  --color-background: #faf2dc ;
+  --color-primary: #3E94AB;
+  --color-secundary: #5C4129;
+  --color-footer: #000000;
+}
+
+.navbar {
+  background-color: var(--color-footer);
+}
+
 .nav-item {
   position: relative;
   display: inline-flex;

@@ -1,6 +1,11 @@
-.img{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 56% 100%);
-}
+:root {
+    --color-background: #faf2dc ;
+    --color-primary: #3E94AB;
+    --color-secundary: #5C4129;
+    --color-footer: #292828;
+    --color-white: #ffffff;
+  }
+
 
 .shop:hover{
     background-color: rgb(235, 235, 235);
@@ -19,13 +24,49 @@
 
 .carrossel{
     width: 100%;
-    max-width: 900px;
+    max-width: 58%;
     margin: 0 auto;
     min-height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 70px;
+}
+
+.body {
+    background-color: var(--color-background);
+    position: relative;
+}
+
+.principal {
+    position: relative;
+}
+
+.detalhes {
+    position: relative;
+    z-index: 10;
+    color: var(--color-white);
+}
+
+.banner {
+    background-color: var(--color-primary);
+}
+
+.shop {
+    background-color: var(--color-white);
+    color: black;
+}
+
+.qualidades {
+    background-color: var(--color-background);
+}
+
+.titulo {
+    color: var(--color-secundary);
+}
+
+.texto {
+    color: var(--color-secundary);
 }
 
 .inner{
@@ -46,4 +87,13 @@
 .carrousel{
     cursor: grab;
     overflow: hidden;
+}
+
+.home {
+    margin-right: 46%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

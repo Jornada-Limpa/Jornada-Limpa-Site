@@ -16,7 +16,8 @@ function Rotas() {
               <Route path="/home" element={<Home />} />
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/projeto" element={<Projeto />} />
+              <Route path="/projeto"  element={<Projeto />} />
+              
     </Routes>
       < Footer />
    </>

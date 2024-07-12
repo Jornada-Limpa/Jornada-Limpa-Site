@@ -1,0 +1,27 @@
+.quinta img{
+    width: 50%;
+  
+   }.quinta{
+     background: var(--color-background);
+     height: 100vh;
+     padding:0;
+     display: flex;
+   
+   }.ods{
+     width: 100vh;
+     background:#4ca146;
+   
+     
+   }.ods img{
+     width: 22rem;
+   }.texto{
+     width: 100vh;
+     padding: 3rem;
+     margin-top: auto;
+     margin-bottom: auto;
+   }.texto h3{
+     font-size: 3rem;
+     
+   }.texto span{
+     color: #3E94AB;
+   }

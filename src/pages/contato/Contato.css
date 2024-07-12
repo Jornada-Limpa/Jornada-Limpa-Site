@@ -1,9 +1,16 @@
+:root {
+  --color-background: #faf2dc ;
+  --color-primary: #3E94AB;
+  --color-secundary: #5C4129;
+  --color-footer: #000000;
+}
+
 body {
-  background-image: url(bg-icons-2.png);
+  background-color: var(--color-primary);
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.24) ;
+  background-color: rgba(166, 179, 182, 0.288) ;
 }
 
 .contact-form-container {
@@ -32,4 +39,5 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
   

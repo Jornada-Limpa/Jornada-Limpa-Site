@@ -1,6 +1,10 @@
-import styled from 'styled-components';
-
 import { GithubLogo, LinkedinLogo, Mailbox, LinktreeLogo } from '@phosphor-icons/react'
+import bradesco from "../../assets/bradesco@2x.png"
+import elo from "../../assets/elo@2x.png"
+import visa from "../../assets/visa@2x.png"
+import mastercard from "../../assets/mastercard@2x.png"
+import pix from "../../assets/pix@2x.png"
+
 
 function Footer() {
     const githubLink = 'https://github.com/Jornada-Limpa';
@@ -14,7 +18,7 @@ function Footer() {
 
   return (
     <>
-        <div className="font-sans flex column justify-between bg-indigo-900 text-white">
+        <div className="font-sans flex column justify-between bg-[#292828] text-white">
           <div className="container flex flex-col items-start py-4 ml-10">
             <p className='text-sm'>
             <a href="/sobre">Quem Somos</a>
@@ -39,11 +43,11 @@ function Footer() {
           <div className="justify-center container flex flex-col items-center pt-2.5">
             <h2 className='text-sm font-bold mb-4'>MEIOS DE PAGAMENTO</h2>
             <div className="flex justify-center gap-4">
-              <img src="/src/assets/bradesco@2x.png" alt="" className='img1' width={38} height={20}/>
-              <img src="/src/assets/elo@2x.png" alt="" className='img1' width={38} height={20}/>
-              <img src="/src/assets/visa@2x.png" alt="" className='img1' width={38} height={20}/>
-              <img src="/src/assets/mastercard@2x.png" alt="" className='img1' width={38} height={20}/>
-              <img src="/src/assets/pix@2x.png" alt="" className='img1' width={38} height={20}/>
+              <img src={bradesco} alt="" className='img1' width={38} height={20}/>
+              <img src={elo} alt="" className='img1' width={38} height={20}/>
+              <img src={visa} alt="" className='img1' width={38} height={20}/>
+              <img src={mastercard}alt="" className='img1' width={38} height={20}/>
+              <img src={pix} alt="" className='img1' width={38} height={20}/>
             </div>
             <div className="flex column flex-col justify-center items-center py-4">
             <p className='font-sans text-sm'>Acesse nossas redes sociais</p>

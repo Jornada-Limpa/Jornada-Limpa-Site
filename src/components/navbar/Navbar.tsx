@@ -21,7 +21,7 @@ function Navbar() {
 
 
   return (
-    <div className='w-full bg-indigo-900 text-white rounded-pill'>
+    <div className='w-full bg-[#292828] text-white rounded-pill'>
       <div className="container mx-auto py-4">
         <div className="flex items-center justify-between">
           <Link to='/' className='text-2xl font-bold uppercase flex items-center'>

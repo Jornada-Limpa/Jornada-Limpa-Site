@@ -39,7 +39,7 @@ function ListaProdutosHome() {
       }
     }
   }
-
+//deus pfv me ajuda
   useEffect(() => {
     buscarProdutos();
   }, [produto.length]);
